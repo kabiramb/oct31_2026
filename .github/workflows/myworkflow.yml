@@ -13,4 +13,7 @@ jobs:
         run: |
           whoami
           cat /etc/os-release
+          docker --version
+          docker compose version
+          systemctl status docker
 
