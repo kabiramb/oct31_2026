@@ -22,7 +22,7 @@ jobs:
         run: ls -al
       - name: mystep2- image build
         run: |
-          docker image build -t kabiramb/myimage2:t2 -f Dockerfile .
+          docker image build -t kabiramb/myimage2:t${{ github.run_number }} -f Dockerfile .
 
 
 
