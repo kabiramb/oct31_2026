@@ -16,4 +16,13 @@ jobs:
           docker --version
           docker compose version
           systemctl status docker
+      - name: mystep2 - checkout the source code
+        uses: actions/checkout@v4
+      - name: mystep3- check if source code is available
+        run: ls -al
+      - name: mystep2- image build
+        run: |
+          docker image build -t kabiramb/myimage2:t2 -f Dockerfile .
+
+
 
