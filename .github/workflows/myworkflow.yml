@@ -1,3 +1,4 @@
+
 name: myworkflow_oct31
 
 on:
@@ -10,5 +11,6 @@ jobs:
     steps:
       - name: mystep1
         run: |
-            whoami
-           cat /etc/os-release 
+          whoami
+          cat /etc/os-release
+
