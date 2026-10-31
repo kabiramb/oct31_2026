@@ -20,9 +20,11 @@ jobs:
         uses: actions/checkout@v4
       - name: mystep3- check if source code is available
         run: ls -al
-      - name: mystep2- image build
+      - name: mystep4- image build
         run: |
           docker image build -t kabiramb/myimage2:t${{ github.run_number }} -f Dockerfile .
+      - name: mystep5-  check if image is available
+        run: docker images
 
 
 
