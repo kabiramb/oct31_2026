@@ -1,0 +1,8 @@
+name: myworkflow_oct31
+
+on:
+  push:
+
+jobs:
+  myjob1:
+    run-on: ubuntu-latest
