@@ -22,9 +22,17 @@ jobs:
         run: ls -al
       - name: mystep4- image build
         run: |
-          docker image build -t kabiramb/myimage2:t${{ github.run_number }} -f Dockerfile .
+          docker image build -t kabiramb/myimage:t${{ github.run_number }} -f Dockerfile .
       - name: mystep5-  check if image is available
         run: docker images
+      - name: mystep6- docker login
+        run: docker/login-action@v3
+        with:
+             username: ${{ secrets.DOCKERHUB_USERNAME }}
+             password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: mystep7-  push the docker image to docker registery
+        run: |
+           docker image push kabiramb/myimage:t${{ github.run_number }}
 
 
 
